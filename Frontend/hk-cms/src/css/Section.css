@@ -1,0 +1,168 @@
+/* Section.css */
+.add-section-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px 40px 5px auto;
+    justify-content: center;
+
+}
+.add-section-container .section-form input[type="text"] {
+    width: 100%; /* Make input field fill the container */
+    padding: 12px; /* Add padding inside the input field */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em; /* Increase font size for better readability */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+.add-section-container h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.add-section-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-section-container label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.add-section-container input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-section-container button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #1714ca;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-section-container button:hover {
+    background-color: #0d178a;
+}
+
+/* Section List */
+.section-list-container {
+    margin: 20px auto;
+    max-width: 600px;
+    margin: 20px 40px 5px auto;
+}
+
+.section-list-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: flex;
+    
+}
+
+.section-list-item .btn-edit {
+    margin-left: 40px;
+    margin-top: 16px;
+    background-color: #198105; 
+    color: white;
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 10px;   
+    
+}
+
+.section-list-item .btn-edit:hover {
+    background-color: #146803; 
+    
+}
+
+.section-list-item .btn-delete {
+    margin-left: 10px;
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    padding: 6px 12px; 
+    font-size: 10px;     
+    margin-bottom: 10px;
+}
+
+.section-list-item .btn-delete:hover {
+    background-color: #d32f2f; 
+}
+.section-list-item .btn-save {
+    background-color: #198105;
+}
+.section-list-item .btn-cancel {
+    background-color: #f44336;
+}
+
+.section-list-item form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-list-item input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+}
+
+.section-list-item .edit-btn {
+    background-color: aqua;
+}
+
+.achievement-grids {
+    border: #0d178a 2px solid;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px; 
+    justify-items: center; 
+
+}
+
+.achievement-items {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    padding: auto;
+}
+
+.achievement-item-sectionlist.selected {
+    border-color: #1714ca;
+    box-shadow: 0 0 5px rgba(23, 20, 202, 0.6);
+  }
+
+.icon-item-sectionlist.selected {
+    border-color: #1714ca;
+    box-shadow: 0 0 5px rgba(23, 20, 202, 0.6);
+}
+
+.achievement-icon-section-list{
+    height: 30px;
+    margin-right: 0;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-bottom: -5px;
+
+}
+
+.list-icon{
+    height: 50px;
+    padding-right: 20px;
+}

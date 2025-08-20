@@ -1,0 +1,122 @@
+.avatar-list-container {
+    margin: 20px auto;
+    max-width: 600px;
+    transform: translateY(18%);
+    position: relative;
+    border: solid grey 2px;
+    border-radius: 10px;
+    background-color: aliceblue;
+
+
+}
+.avatar-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+
+
+.avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px; 
+    justify-items: center; 
+
+}
+
+.slett-button {
+    margin-top: 8px;
+    padding: 4px 10px;
+    font-size: 12px;
+    border: 1px solid #e60e0e;
+    border-radius: 4px;
+    background-color: #d81515;
+    cursor: pointer;
+    color:white;
+}
+
+.avatar-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.avatar-name {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.upload-avatar-container {
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    border: solid grey 2px;
+    border-radius: 10px;
+    background-color: aliceblue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; 
+    padding-top: 80px; 
+    gap: 50px;
+    
+}
+
+.avatar-title {
+    text-align: center;
+
+}
+
+
+
+.upload-button{
+    position: relative;
+    text-align: center;
+    top: 30%;
+}
+
+.file-selector {
+    position: relative;
+    top: 20%;
+  
+}
+
+.avatar-name-tag {
+    position: absolute;
+    top: 70%;
+}
+
+.avatarName {
+    position: absolute;
+    top: 62%;
+}
+
+.status-true{
+    position: absolute;
+    color: green;
+    top: 80%;
+}
+
+.status-false{
+    position: absolute;
+    color: red;
+    top: 80%;
+}
+
+.p{
+    position: absolute;
+    top: 20%;
+    font-style: italic;
+    font-size: 13px;
+}

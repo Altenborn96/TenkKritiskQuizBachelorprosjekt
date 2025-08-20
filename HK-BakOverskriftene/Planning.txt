@@ -1,0 +1,29 @@
+﻿Unordered list of things to do.  --TODO ||FIXED /DELAY
+
+1. Add players to the database:
+|| Add some mock data to show in the CMS (se om det er en query editor i smarterasp.net for å legge in mock data)
+|| Decide if I want to use identityUser extension to the class or store username and password in the database. (ask Tomas?)
+|| Add a controller for the Player class; Create function for the app (COMMENT THAT THE STUDENTS NEED TO DECIDE DETAILS AROUND CREATION OF THE USER)
+|| Create a frontend page for the CMS to display, sort and delete users from the database. 
+/ Navnfilter til Create user funksjonen (Hvordan skal vi håndtere dette i app?)
+
+2. Consider fixing the refresh trigger for the sidebar. **Low priority
+- Consider enhancing the nav-bar to be more intuitiv.
+|| Change "Tilbake til spørsmål" navigation to navigate propperly. 
+|| Consider adding the questiontext to the header when modifiying a spesific question. 
+|| Fix scrolling for the sidebar.
+
+3. Refactor some of the code to make it more intuitive to understand for the students. 
+|| Add propper comments to the code where neccessary to make it easier to understand the why of the code.
+- Reconsider names of DTO's and CRUD method names. Perhaps create Interface (this might be a to deep and unnecessary abstraction for the scope of this CMS) 
+
+4. || Hide connectionstring, passwords (also in frontend) in environmental variables in the program. **High priority
+
+5. Lag et kall til login-siden slik at vi skaper et "dormancy-ping" for å kald-starte cms'et. (Dette kan fungere for appen også, kommenter til studentene)
+|| Endre passord og brukernavn til login (lag 2 logins?) Dette må også gjemmes fra backend kontrolleren.
+
+6. || Add a function to delete spesific questions from a section. This needs to cascade delete the answeres connected to it. 
+
+Additional notes: 
+
+Might have to implement some sort of cache-busting system. To make sure the newest version of the cms is loaded. This might not be a problem though. 

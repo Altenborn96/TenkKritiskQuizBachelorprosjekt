@@ -1,0 +1,23 @@
+{
+    "cli": {
+      "version": ">= 0.52.0"
+    },
+    "build": {
+      "development": {
+        "developmentClient": true,
+        "distribution": "internal",
+        "env": {
+          "EXPO_PUBLIC_BACKEND_URL": "http://192.168.1.71:5169"
+        }
+      },
+      "production": {
+        "distribution": "store",
+        "env": {
+          "EXPO_PUBLIC_BACKEND_URL": "https://tenk-kritisk.no"
+        }
+      }
+    },
+    "submit": {
+      "production": {}
+    }
+  }

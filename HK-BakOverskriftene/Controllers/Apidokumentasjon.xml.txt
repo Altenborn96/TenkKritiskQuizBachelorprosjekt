@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HK-BakOverskriftene</name>
+    </assembly>
+    <members>
+        <member name="M:BakOverskriftene.Api.Controllers.AnswersController.CreateAnswer(System.Int32,AnswerDTO)">
+            <summary>
+            Creates a new answer for the given question.
+            This method validates the answer data, checks if the associated question exists, 
+            and then associates the answer with the question before saving it to the database.
+            </summary>
+            <param name="questionId">The ID of the question to which the answer is being added.</param>
+            <param name="answerDto">The data transfer object containing the answer text and correctness.</param>
+            <returns>Returns a CreatedAtAction result with the created answer, or a BadRequest/NotFound result if validation fails.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.AnswersController.GetAnswerById(System.Int32)">
+            <summary>
+            Retrieves an answer by its ID.
+            This method attempts to find the answer by its unique identifier and returns it if found.
+            </summary>
+            <param name="id">The ID of the answer to be retrieved.</param>
+            <returns>Returns the answer if found, or a NotFound result if no answer exists for the given ID.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.AnswersController.GetAnswersByQuestionId(System.Int32)">
+            <summary>
+            Retrieves all answers for a specific question by its ID.
+            This method returns a list of answers associated with a particular question, 
+            including the question's text and the answers' correctness status.
+            </summary>
+            <param name="questionId">The ID of the question whose answers are being fetched.</param>
+            <returns>Returns a list of answers for the specified question, or a NotFound result if the question doesn't exist.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.AnswersController.UpdateAnswer(System.Int32,AnswerDTO)">
+            <summary>
+            Updates an existing answer with new data.
+            This method validates the provided answer data, finds the existing answer by its ID,
+            and updates the answer's text and correctness status.
+            </summary>
+            <param name="id">The ID of the answer to be updated.</param>
+            <param name="answerDto">The data transfer object containing the new answer text and correctness status.</param>
+            <returns>Returns an updated answer if successful, or a NotFound/BadRequest result if the answer doesn't exist or data is invalid.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.AnswersController.DeleteAnswer(System.Int32)">
+            <summary>
+            Deletes an answer by its ID.
+            This method finds the answer by its ID, removes it from the database, and saves the changes.
+            </summary>
+            <param name="id">The ID of the answer to be deleted.</param>
+            <returns>Returns a NoContent result if deletion is successful, or a NotFound result if the answer doesn't exist.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.QuestionsController.AddQuestion(System.Int32,QuestionDTO)">
+            <summary>
+            Adds a new question to the specified section.
+            This method validates the question data, checks if the section exists, 
+            and then adds the question to the section before saving it to the database.
+            </summary>
+            <param name="sectionId">The ID of the section to which the question will be added.</param>
+            <param name="questionDTO">The data transfer object containing the question text and section ID.</param>
+            <returns>Returns a CreatedAtAction result with the newly created question, or a BadRequest/NotFound result if validation fails.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.QuestionsController.GetQuestionsBySection(System.Int32)">
+            <summary>
+            Retrieves all questions for a specified section.
+            This method fetches the section along with its associated questions 
+            and returns them as a list of QuestionDisplayDTOs.
+            </summary>
+            <param name="sectionId">The ID of the section whose questions are being fetched.</param>
+            <returns>Returns a list of questions associated with the given section, or a NotFound result if the section doesn't exist.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.QuestionsController.GetQuestionById(System.Int32)">
+            <summary>
+            Retrieves a question by its ID.
+            This method attempts to find the question by its unique identifier and returns it if found.
+            </summary>
+            <param name="id">The ID of the question to be retrieved.</param>
+            <returns>Returns the question if found, or a NotFound result if no question exists for the given ID.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.QuestionsController.UpdateQuestion(System.Int32,QuestionDTO)">
+            <summary>
+            Updates an existing question with new data.
+            This method validates the provided question data, finds the existing question by its ID,
+            and updates the question's text.
+            </summary>
+            <param name="id">The ID of the question to be updated.</param>
+            <param name="questionDTO">The data transfer object containing the new question text.</param>
+            <returns>Returns the updated question if successful, or a NotFound/BadRequest result if the question doesn't exist or data is invalid.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.QuestionsController.DeleteQuestion(System.Int32)">
+            <summary>
+            Deletes a question by its ID.
+            This method finds the question by its ID, removes it from the database, and saves the changes.
+            </summary>
+            <param name="id">The ID of the question to be deleted.</param>
+            <returns>Returns a NoContent result if deletion is successful, or a NotFound result if the question doesn't exist.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.SectionController.CreateSection(BakOverskriftene.Domain.Models.Section)">
+            <summary>
+            Creates a new section.
+            This method validates the section data, initializes an empty list of questions, 
+            and adds the section to the database.
+            </summary>
+            <param name="section">The section to be created, including the section name and any associated data.</param>
+            <returns>Returns a CreatedAtAction result with the newly created section, or a BadRequest result if data is invalid.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.SectionController.GetSectionById(System.Int32)">
+            <summary>
+            Retrieves a section by its ID.
+            This method attempts to find the section by its unique identifier and returns it if found, 
+            including any associated questions.
+            </summary>
+            <param name="id">The ID of the section to be retrieved.</param>
+            <returns>Returns the section if found, or a NotFound result if no section exists for the given ID.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.SectionController.GetAllSections">
+            <summary>
+            Retrieves a list of all sections.
+            This method returns a list of all sections, each represented by a simplified DTO containing the section name.
+            </summary>
+            <returns>Returns a list of all sections, or an empty list if no sections exist.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.SectionController.DeleteSection(System.Int32)">
+            <summary>
+            Deletes a section by its ID.
+            This method attempts to find the section by its unique identifier and deletes it from the database if found.
+            </summary>
+            <param name="id">The ID of the section to be deleted.</param>
+            <returns>Returns a NoContent result if deletion is successful, or a NotFound result if the section doesn't exist.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.SectionController.UpdateSection(System.Int32,BakOverskriftene.Domain.Models.Section)">
+            <summary>
+            Updates an existing section with new data.
+            This method validates the section data, finds the existing section by its ID, 
+            and updates its properties with the new values.
+            </summary>
+            <param name="id">The ID of the section to be updated.</param>
+            <param name="updatedSection">The data transfer object containing the updated section details.</param>
+            <returns>Returns the updated section if successful, or a NotFound/BadRequest result if the section doesn't exist or data is invalid.</returns>
+        </member>
+        <member name="M:BakOverskriftene.Api.Controllers.SectionController.GetSectionsWithQuestionsAndAnswers">
+            <summary>
+            Retrieves a list of sections with detailed information about each section, including associated questions and answers.
+            This method returns a detailed view of sections, where each section contains its questions and each question contains its answers.
+            </summary>
+            <returns>Returns a list of sections with detailed information about the questions and answers associated with each section.</returns>
+        </member>
+        <member name="M:HK_BakOverskriftene.Controllers.CmsLoginController.Login(BakOverskriftene.Domain.Models.DTO_s.CmsLoginDTO)">
+            <summary>
+            Login method to check credentials against environment variables.
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

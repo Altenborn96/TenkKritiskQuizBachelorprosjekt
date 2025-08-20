@@ -1,0 +1,60 @@
+.faq-list-item{
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 1000px;
+    height: 200px;
+    background-color: aliceblue;
+    position: relative;
+}
+
+.faq-list-question{
+    margin-left: 20px;
+
+}
+
+.faq-list-answer{
+    margin-left: 20px;
+}
+
+.faq-list-delete-button{
+    color: red;
+    position: absolute;
+    left: 101%;
+    top: 65%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.faq-list-update-button{
+    color: green;
+    position: absolute;
+    left: 101%;
+    top: 50%;
+
+    cursor: pointer;
+}
+
+.faq-add-container{
+position: absolute;
+border: rgb(156, 152, 152) solid 2px;
+height: 500px;
+width: 500px;
+left: 65%;
+display: flex;
+flex-direction: column;
+padding: 50px;
+border-radius: 50px;
+background-color: aliceblue;
+}
+
+.faq-list-edit-container {
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: aliceblue;
+    position: static;
+    width: 900px;
+  }
+  

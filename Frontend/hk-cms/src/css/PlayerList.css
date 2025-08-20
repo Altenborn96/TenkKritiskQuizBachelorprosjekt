@@ -1,0 +1,42 @@
+.player-list-container {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    left: 75%; 
+    width: 15%;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.player-list-container h2 {
+    margin-top: 0;
+}
+
+.player-list-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.player-list-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.delete-player-button {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-player-button:hover {
+    background-color: #ff1a1a;
+}

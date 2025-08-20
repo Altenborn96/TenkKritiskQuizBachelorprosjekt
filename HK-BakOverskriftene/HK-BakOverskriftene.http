@@ -1,0 +1,6 @@
+@HK_BakOverskriftene_HostAddress = http://localhost:5169
+
+GET {{HK_BakOverskriftene_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,17 @@
+.aboutus-container{
+    margin-top: 10%;
+    border: 3px solid grey;
+    width: 60%;
+    height: 800px;
+    position: fixed;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.aboutus-div{
+    margin: 20px;
+}

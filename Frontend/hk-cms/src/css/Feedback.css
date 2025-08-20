@@ -1,0 +1,75 @@
+.feedback-container {
+    position: relative;
+    top: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    border: 2px solid grey;
+  }
+  
+
+.comment-container{
+    margin-top: 1px;
+    border: 3px solid grey;
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 800px;
+    
+
+}
+
+.comment-list-item{
+
+    margin-top: 50px;
+}
+
+.comment-list-header{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.comment-list-text {
+    margin-left: 20px;
+    min-height: 70px; 
+    height: auto;     
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+  }
+  
+
+.rating-container{
+    position: relative;
+    margin-top: 1px;
+    left: 50%;
+}
+
+.feedback-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+  }
+  
+  .comment-section ul,
+  .rating-section ul {
+    list-style-type: none;
+    padding-left: 100px;
+    padding-right: 160px;
+  }
+  
+  .h2{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .rating-box {
+    border: 3px solid grey;
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
